@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 8px dashed #353840;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.grid-top-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-bottom-container {
+  width: 100%;
+  display: flex;
+  padding: 0.6rem 0rem 0rem 0rem;
+}
+
+.grid-title {
+  width: 100%;
+  font-size: 26px;
+  color: #f7f7f7;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid-row {
+  display: flex;
+}
+
+.server-response {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 32rem;
+  color: #f7f7f7;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0.2rem;
+  background-color: #222428;
+  border: 2px solid #353840;
+  width: 80%;
+  height: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.send-button {
+  background: #18EF62;
+  color: #1D1E22;
+  border: 1px solid #18EF62;
+  text-align: center;
+  margin: 0;
+  padding: 0.8rem 0rem 0.8rem 0rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
+.send-button:hover {
+  cursor: pointer;
+  background: transparent;
+  color: #18EF62;
+}
+
+.node-inactive {
+  width: 20px;
+  aspect-ratio: 1/1;
+  border: 1px solid #353840;
+}
+
+.node-active {
+  width: 20px;
+  aspect-ratio: 1/1;
+  background-color: #F7F7F7;
+  border: 1px solid #353840;
+}
+
+@keyframes LoaderAnimation {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+.loader-container-small {
+    display: inline-block;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    border: 1rem solid #f7f7f7;
+    border-top-color: transparent;
+    animation: LoaderAnimation 1s ease-in-out infinite;
+    -webkit-animation: LoaderAnimation 1s ease-in-out infinite;
+    margin: 0;
 }
