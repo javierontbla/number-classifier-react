@@ -4,4 +4,4 @@ This front-end, developed with React.js, complements a number classifier (0-9) s
 
 ### Where is the back-end?
 
-You can find the repo of the Flask backend here:
+You can find the repo of the Flask backend here: https://github.com/javierontbla/number-classifier-flask
